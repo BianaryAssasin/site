@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: rgb(43, 43, 43);
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+    border: 1px solid orange;
+    padding: 7px;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    border-radius: 4px;
+}
+
+img {
+    height: 70px;
+    width: 70px;
+    border-radius: 4px;
+}
+
+.document {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.document .metadata {
+    margin-left: 1rem;
+    display: flex; gap: 1rem;
+    color: white;
+}
+
+.document .content {
+    background-color: white;
+    color: black;
+    width: 52%;
+    padding: 12px;
+    min-height: 20rem;
+    border-radius: 4px;
+    white-space: pre-line;
+}
+
+.document .content h1 {
+    text-align: center;
+}
