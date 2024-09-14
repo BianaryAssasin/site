@@ -1,7 +1,7 @@
 const news = document.getElementById("news");
 const load = document.getElementById("load");
 
-let index = 0;
+let index = 2;
 async function loadData() {
     const api = await fetch("./config.json");
     const jsonApi = await api.json();
