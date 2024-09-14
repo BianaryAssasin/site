@@ -1,7 +1,6 @@
 const news = document.getElementById("news");
 const load = document.getElementById("load");
 
-let index = 2;
 async function loadData() {
     const api = await fetch("./config.json");
     const jsonApi = await api.json();
@@ -12,16 +11,8 @@ async function loadData() {
     });
     const json = await response.json();
     const data = json.data;
-    if(index != 0) {
-        data.splice(0, index);
-    }
 
     for(let i = 0; i < data.length; i++) {
-        if(i >= index) {
-            index += i;
-            load.style.display = "block";
-            return;
-        }
         const info = data[i].attributes;
 
         const itemElement = document.createElement("div");
