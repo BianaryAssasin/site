@@ -21,7 +21,7 @@ async function loadData() {
             <img src="${info.url}">
             <div>
                 <h1>${info.Title}</h1>
-                 <h4>${info.Heading}</h4>
+                <h4>${info.Heading}</h4>
             </div>
             <p>${info.Date}</p>
         `
@@ -31,6 +31,7 @@ async function loadData() {
         });
     }
 }
+
 loadData();
 
 function articleOpen(uuid) {
