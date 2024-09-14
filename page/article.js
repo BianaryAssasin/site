@@ -11,7 +11,7 @@ async function loadData() {
     const uuid = uuid_test.get("id").replaceAll('"', "");
    // if(!uuid) return window.location = "../home.html";
 
-    const response = await fetch(`http://localhost:2337/api/blogs2?filters[uuid][$eq]=${uuid}`, {
+    const response = await fetch(`https://awesome-books-e07c485b8e.strapiapp.com/api/blogs2?filters[uuid][$eq]=${uuid}`, {
         headers: {
             "Authorization": `Bearer ${jsonApi.strapi_api.key}`
         }
