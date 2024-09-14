@@ -8,6 +8,19 @@ body {
     background: rgb(43, 43, 43);
 }
 
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    border: none;
+    padding: 5px;
+    background: transparent;
+    border: 1px solid orange;
+    color: white;
+    border-radius: 4px;
+}
+
 header .container {
     text-align: center;
     color: white;
