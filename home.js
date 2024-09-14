@@ -1,5 +1,4 @@
 const news = document.getElementById("news");
-const load = document.getElementById("load");
 
 async function loadData() {
     const api = await fetch("./config.json");
@@ -32,8 +31,6 @@ async function loadData() {
         });
     }
 }
-
-load.addEventListener("click", loadData);
 loadData();
 
 function articleOpen(uuid) {
