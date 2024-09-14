@@ -18,8 +18,9 @@ async function loadData() {
 
     for(let i = 0; i < data.length; i++) {
         if(i >= index) {
-            index = i;
+            index += i;
             load.style.display = "block";
+            return;
         }
         const info = data[i].attributes;
 
