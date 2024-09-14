@@ -5,7 +5,7 @@ let index = 0;
 async function loadData() {
     const api = await fetch("./config.json");
     const jsonApi = await api.json();
-    const response = await fetch("http://localhost:2337/api/blogs2", {
+    const response = await fetch("https://awesome-books-e07c485b8e.strapiapp.com/api/blogs2", {
         headers: {
             "Authorization": `Bearer ${jsonApi.strapi_api.key}`
         }
