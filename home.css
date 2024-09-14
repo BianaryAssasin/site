@@ -9,7 +9,7 @@ body {
 }
 
 button {
-    display: none;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
@@ -37,15 +37,18 @@ header .container {
 
 .news .item {
     display: flex;
-    align-items: center;
     gap: 1rem;
-    background: rgb(58, 58, 58);
     padding: 10px;
     border-radius: 4px;
     color: white;
     transition: .20s ease;
-    width: 18rem;
+    width: 80%;
     position: relative;
+    border-bottom: 1px solid gray;
+}
+
+.news .items:hover {
+    background: rgb(58, 58, 58);
 }
 
 .news .item p {
@@ -72,11 +75,16 @@ header .container {
 
 .news {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     gap: 2rem;
     margin-top: 3rem;
+}
+
+@media (max-width: 800px) {
+    .news {
+        width: 100%;
+    }
 }
