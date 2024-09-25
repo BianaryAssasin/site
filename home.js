@@ -35,7 +35,7 @@ async function loadData() {
         }
     });
     const json = await response.json();
-    const data = json.data;
+    const data = json.data.reverse();
 
     for(let i = 0; i < data.length; i++) {
         const info = data[i].attributes;
