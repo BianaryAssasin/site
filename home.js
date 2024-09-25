@@ -1,6 +1,32 @@
 const news = document.getElementById("news");
 
+if(!localStorage.getItem("cache")) {
+    localStorage.setItem("cache", JSON.stringify([]));
+}
+const cache = localStorage.getItem("cache");
+
+function preLoad() {
+    cache.forEach(article => {
+        const itemElement = document.createElement();
+        itemElement.classList.add("item");
+        itemElement.innerHTML += `
+            <img src="${article.attributes.url}">
+            <div>
+                <h1>${article.attributes.Title}</h1>
+                <h4>${article.attributes.Heading}</h4>
+            </div>
+            <p>${article.attributes.Date}</p>
+        `
+    })
+}
+
+preLoad();
+
 async function loadData() {
+    while(news.firstChild) {
+        news.removeChild(news.firstChild);
+    }
+
     const api = await fetch("./config.json");
     const jsonApi = await api.json();
     const response = await fetch("https://awesome-books-e07c485b8e.strapiapp.com/api/blogs2", {
@@ -29,7 +55,12 @@ async function loadData() {
         itemElement.addEventListener("click", () => {
             articleOpen(itemElement.dataset.uuid);
         });
+        const currentCache = localStorage.getItem("cache");
+        currentCache.push({
+            
+        })
     }
+    localStorage.setItem("cache", data)
 }
 
 loadData();
